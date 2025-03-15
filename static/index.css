@@ -1,0 +1,14 @@
+/* Внешняя таблица стилей (общие стили сайта) */
+
+/* Сброс стандартных отступов */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+body {
+    font-family: 'Comic Sans MS', cursive;
+    background-color: #e6f5e6;
+    line-height: 1.6;
+    padding: 20px;
+  }
