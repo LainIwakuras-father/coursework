@@ -63,7 +63,7 @@ body {
 .menu-item {
   position: relative;
   cursor: pointer;
-  color: white;
+  color: rgb(238, 238, 238);
   padding: 10px;
   transition: 0.3s;
 }
