@@ -12,24 +12,32 @@
         </nav>
         <div class="main-container">
             <div class="background-image"></div>
-            
                 <div class="page">
-                        <div class="logo">
+                        <div class="logo-nav">
                             <a href="index.html"><span><h1 style="color: #4B7F52;">Shrekopedia</h1></span></a>
-                            <h1 style="color: #4B7F52;">Добро пожаловать в Болото Шрека!</h1>
-                            <h2>нажми на картинку</h2>
-                            <a href="https://rutube.ru/video/c6cc4d620b1d4338901770a44b3e82f4/"><img src="media/logo-shreck.png" ></a>
                         </div>
-                        <div class="menu">
-                            <!-- выпадающее меню НАДО СДЕЛАТЬ -->
-                            <a href="movies.html"><span>Мультьфильмы</span></a>
-                            <a href="games.html"><span>Игры</span></a>
-                            <a href="characters.html"><span>Персонажи</span></a>
-                            <a href="victorins.html"><span>Викторины</span></a>
-                        </div>
+
+                        <nav class="menu">
+                                <div class="menu-item" data-submenu="menu">
+                                    <span>Меню</span>
+                                    <!-- выпадающее меню НАДО СДЕЛАТЬ -->
+                                    <div class="submenu" id="submenuid">
+                                        <a href="movies.html">Мультьфильмы </a>
+                                        <a href="games.html">Игры </a>
+                                        <a href="characters.html">Персонажи </a>
+                                        <a href="victorins.html">Викторины </a>
+                                    </div>
+                                </div>
+                        </nav>
+                       
+
+                        <h2>нажми на картинку</h2>
+                        <a href="https://rutube.ru/video/c6cc4d620b1d4338901770a44b3e82f4/"><img src="media/logo-shreck.png" ></a>
+
                         <div class="content">
                             <img src="media/images.jpg" alt=""шрек>
                             <h1>Заглавная</h1>
+                            <h1 style="color: #4B7F52;">Добро пожаловать в Болото ШрекаВикипедии!</h1>
                             <p>Сайт о фильмах и играх о Шреке. Здесь вы сможете найти фильмы и игры о Шреке и его друзьях.</p>
                         </div>
                         <div class="footer">
@@ -38,6 +46,32 @@
                 </div>
             
         </div>
-        <script></script>
+        <script>
+        document.querySelectorAll('.menu-item').forEach(item => {
+        const submenu = item.querySelector('.submenu');
+        let timeout;
+
+        // Открытие при наведении
+        item.addEventListener('mouseenter', () => {
+            clearTimeout(timeout);
+            submenu.classList.add('active');
+        });
+
+        // Закрытие при уходе
+        item.addEventListener('mouseleave', () => {
+            timeout = setTimeout(() => {
+            submenu.classList.remove('active');
+            }, 300);
+        });
+
+        // Предотвращение преждевременного закрытия
+        submenu.addEventListener('mouseenter', () => clearTimeout(timeout));
+        submenu.addEventListener('mouseleave', () => {
+            timeout = setTimeout(() => {
+            submenu.classList.remove('active');
+            }, 200);
+        });
+        });
+        </script>
     </body>
 </html>
