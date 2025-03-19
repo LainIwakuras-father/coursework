@@ -3,75 +3,106 @@
     <head>
         <title>Shrekopedia</title>
         <meta charset="utf-8">
+        <meta name="keywords" content="Shrek, Фильмы, игры">
+        <meta name="author" content="Обухов Юрий">
+        <meta name="description" content="Shrekopedia">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" type="text/css" href="static/index.css">
         <link rel="shortcut icon" href="media/Site-favicon.ico">
     </head>
     <body>
-        <nav class="global-navigator">
-                <a href="register.html">Войтите в свой аккаунт или зарегистрируйтесь.</a>
-        </nav>
         <div class="main-container">
-            <div class="background-image"></div>
-                <div class="resizable-container">
-                    <div class="logo-nav">
-                                <a href="index.html"><span><h1 style="color: #4B7F52;">Shrekopedia</h1></span></a>
-                    </div>
+            <nav class="global-navigator">
+                    <a href="register.html">Войтите в свой аккаунт или зарегистрируйтесь.</a>
+            </nav>
+            <div class="main-container">
+                <div class="background-image"></div>
+                    <div class="resizable-container">
+                        <!-- Шапка -->
+                        <div >
+                            <header class="logo-header">
+                                <a  accesskey="z" href="index.html">
+                                    <img src="media/Site-logo.webp" height="65" width="250"   alt="Шрек вики">
+                                </a>
+                                <nav class="menu">
+                                    <div class="menu-item" data-submenu="menu">
+                                                    <span class="trigger">Меню </span>
+                                                    <div class="submenu" id="submenuid">
+                                                        <ul class="menu-list">
+                                                            <li class=item-list>
+                                                            <a href="movies.html">Мультфильмы </a>
+                                                            </li>
+                                                            <li class=item-list>
+                                                                <a href="games.html">Игры </a>
+                                                            </li>
+                                                            <li class=item-list>
+                                                                <a href="characters.html">Персонажи </a>
+                                                            </li >
+                                                            <li class=item-list>
+                                                                <a href="victorins.html">Викторины </a>
+                                                            </li>
+                                                        </ul>
+                                                    </div>     
+                                    </div>
+                                </nav>
+                            </header>
 
-                    <nav class="menu">
-                        <div class="menu-item" data-submenu="menu">
-                                        <span>Меню</span>
-                                        <!-- выпадающее меню НАДО СДЕЛАТЬ -->
-                                        <div class="submenu" id="submenuid">
-                                            <a href="movies.html">Мультьфильмы </a>
-                                            <a href="games.html">Игры </a>
-                                            <a href="characters.html">Персонажи </a>
-                                            <a href="victorins.html">Викторины </a>
+                        <!-- Основной контент --> 
+                        </div>    
+                        <div class="page">
+                            <div id="content">
+                                    <h1>Заглавная</h1>
+                                    <h1 style="color: #4B7F52;">Добро пожаловать в Болото ШрекаВикипедии!</h1>
+                                    <p>Сайт о фильмах и играх о Шреке. Здесь вы сможете найти фильмы и игры о Шреке и его друзьях.</p>
+                                    <img src="media/images.jpg" alt="шрек">
+                                    <img src="media/fiona.png" alt="фиона">
+                                    <img src="media/donkey.jpg" alt="донк">
+                                    <img src="media/cat.jpg" alt="пусс">
+                                    <img src="media/фаркуад.jpg" alt="пан">
+                                    <img src="media/дракониха.jpg" alt="шрек">
+                                    <p>Материалы сообщества доступны в соответствии с условиями лицензии CC-BY-SA, если не указано иное.</p>
                             </div>
                         </div>
-                    </nav>
-                        
-
-                    <div class="page">
-                            <h2>нажми на картинку</h2>
-                            <a href="https://rutube.ru/video/c6cc4d620b1d4338901770a44b3e82f4/"><img src="media/logo-shreck.png" ></a>
-
-                            <div class="content">
-                                <img src="media/images.jpg" alt=""шрек>
-                                <h1>Заглавная</h1>
-                                <h1 style="color: #4B7F52;">Добро пожаловать в Болото ШрекаВикипедии!</h1>
-                                <p>Сайт о фильмах и играх о Шреке. Здесь вы сможете найти фильмы и игры о Шреке и его друзьях.</p>
-                            </div>
-                            <div class="footer">
-                                <p>Сайт создан в рамках курсовой работы по Основам Интернет Технологиям. Все материалы — фанатский некоммерческий проект.</p>
-                            </div>
                     </div>
-                </div>
+                    <!-- Подвал -->
+                    <div class="footer">
+                        <div class="container">
+                            <p>© 2023 Shrekpedia. Все права защищены.</p>
+                            <p>Сайт создан в рамках курсовой работы по Основам Интернет Технологиям. Все материалы — фанатский некоммерческий проект.</p>
+                        </div>
+                    </div>
+                    
+            </div>
         </div>
         <script>
+        // Обновите обработчики событий
         document.querySelectorAll('.menu-item').forEach(item => {
         const submenu = item.querySelector('.submenu');
         let timeout;
 
-        // Открытие при наведении
         item.addEventListener('mouseenter', () => {
-            clearTimeout(timeout);
-            submenu.classList.add('active');
-        });
+                clearTimeout(timeout);
+                submenu.style.display = 'block';
+                submenu.style.opacity = '1';
+                submenu.style.transform = 'translateY(0)';
+            });
 
-        // Закрытие при уходе
         item.addEventListener('mouseleave', () => {
-            timeout = setTimeout(() => {
-            submenu.classList.remove('active');
-            }, 300);
-        });
+                timeout = setTimeout(() => {
+                    submenu.style.display = 'none';
+                    submenu.style.opacity = '0';
+                    submenu.style.transform = 'translateY(-10px)';
+                }, 300);
+            });
 
-        // Предотвращение преждевременного закрытия
         submenu.addEventListener('mouseenter', () => clearTimeout(timeout));
         submenu.addEventListener('mouseleave', () => {
-            timeout = setTimeout(() => {
-            submenu.classList.remove('active');
-            }, 200);
-        });
+                timeout = setTimeout(() => {
+                    submenu.style.display = 'none';
+                    submenu.style.opacity = '0';
+                    submenu.style.transform = 'translateY(-10px)';
+                }, 200);
+            });
         });
         </script>
     </body>
