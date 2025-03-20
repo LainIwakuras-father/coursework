@@ -13,6 +13,31 @@ body {
     font-size: 14px;
     line-height: 1.5;
 }
+/* .global-navigator {
+  position: relative;
+  margin: 10px;
+  padding: 0;
+  
+}
+.register-trigger {
+  color: #ffffff;
+  font-weight: bold;
+  padding: 8px 15px;
+  border: 1px solid #ffffff;
+  background: #ffffff;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+  cursor: pointer;
+  font-size: 16px;
+  
+}
+.register-trigger:hover {
+  background-color: #9c9c9c;
+}
+
+.global-navigator:hover {
+  background-color: rgba(255, 255, 255, 0);
+} */
 .main-container {
   position: relative;
   min-height: 100vh;
@@ -40,37 +65,48 @@ body {
 }
 
 .resizable-container {
-  max-width: 1000px;
+  max-width: 950px;
   background-color: rgb(255, 255,255, 0);
   height: 100%;
   margin: 0 auto;
   position: relative;
 }
-
-
+.header-wrapper {
+  display: flex;
+  flex-direction: column;
+  height: 148px;
+  justify-content: flex-end;
+  
+}
 .logo-header {
   display: flex;
+  width: 100%;
   justify-content: space-between;
   align-items: center;
+  background: rgba(255, 255, 255, 0);
+}
+.name-header {
+  font-weight: 500;
+  font-size: 18px;
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+  padding: 0px 148px 0px  0px ;
+
+}
+.name-header:hover {
+  text-decoration: underline;
 }
 
-
-
 .menu {
-  display: flex;
-  gap: 20px;
-  background: rgb(255, 255,255, 0);
-  align-items: center;
-  padding: 10px;
+  padding: 0px 25px 0px  0px;
   position: relative;
+  color: rgb(255, 255, 255);
+  cursor: pointer;
 }
 
 .menu-item {
   position: relative;
   display: inline-block;
-  margin: 20px;
-  cursor: pointer;
-  color: rgb(238, 238, 238);
   padding: 10px 20px;
   transition: 0.3s;
   z-index: 2;
@@ -78,7 +114,6 @@ body {
 
 
 .trigger {
-  cursor: pointer;
   font-weight: bold;
 }
 
@@ -90,7 +125,6 @@ body {
   content: '▼';
   position: absolute;
   right: 0;
-  content: '▼';
   transition: all 0.3s ease;
 }
 
@@ -104,7 +138,7 @@ body {
   position: absolute;
   top: 100%;
   left: 0;
-  background: white;
+  background: rgb(240, 229, 229);
   min-width: 150px;
   box-shadow: 0 4px 8px rgba(0,0,0,0.1);
   z-index: 1000;

@@ -3,107 +3,140 @@
     <head>
         <title>Shrekopedia</title>
         <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="keywords" content="Shrek, Фильмы, игры">
         <meta name="author" content="Обухов Юрий">
         <meta name="description" content="Shrekopedia">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" type="text/css" href="static/index.css">
         <link rel="shortcut icon" href="media/Site-favicon.ico">
+        <style>
+            #content{
+                margin: 0;
+                padding: 0;
+                border: 0;
+                vertical-align: initial;
+            }
+            table {
+                border-collapse: separate;
+                display: table;
+                text-indent: initial;
+                unicode-bidi: isolate;
+                width: 100%;
+                margin-top: 0px;
+                margin-bottom: 5px;
+                border: 1px solid #0B3B39;
+            }
+            .portal-header {
+                background: linear-gradient(to top, #0B3B39, #0B615E);
+                border: 1px solid #0B3B39;
+                padding: 3px 5px;
+                color: #FFF;
+                font-size: x-large;
+                font-weight: bold;
+                text-align: center;
+            }
+            .portal-body {
+                border: 1px solid #0B3B39;
+                background-color: transparent;
+                padding-left: 5px;
+                padding-right: 5px;
+                vertical-align: top;
+            }
+            .page p {
+                margin: 0 0 24px;
+                overflow-wrap: break-word;
+                line-height: 1.75;
+                font-size: inherit;
+            }
+
+        </style>
     </head>
     <body>
         <div class="main-container">
-            <nav class="global-navigator">
-                    <a href="register.html">Войтите в свой аккаунт или зарегистрируйтесь.</a>
-            </nav>
+            <!-- навигация с кнопкой войти или зарегестрироватся -->
+            <!-- <nav class="global-navigator">
+                    <span class="register-trigger">
+                        <a href="register.html">Войтите в свой аккаунт или зарегистрируйтесь.</a>
+                    </span>
+            </nav> -->
             <div class="main-container">
                 <div class="background-image"></div>
                     <div class="resizable-container">
                         <!-- Шапка -->
                         <div >
-                            <header class="logo-header">
-                                <a  accesskey="z" href="index.html">
-                                    <img src="media/Site-logo.webp" height="65" width="250"   alt="Шрек вики">
-                                </a>
-                                <nav class="menu">
-                                    <div class="menu-item" data-submenu="menu">
-                                                    <span class="trigger">Меню </span>
-                                                    <div class="submenu" id="submenuid">
-                                                        <ul class="menu-list">
-                                                            <li class=item-list>
-                                                            <a href="movies.html">Мультфильмы </a>
-                                                            </li>
-                                                            <li class=item-list>
-                                                                <a href="games.html">Игры </a>
-                                                            </li>
-                                                            <li class=item-list>
-                                                                <a href="characters.html">Персонажи </a>
-                                                            </li >
-                                                            <li class=item-list>
-                                                                <a href="victorins.html">Викторины </a>
-                                                            </li>
-                                                        </ul>
-                                                    </div>     
-                                    </div>
-                                </nav>
-                            </header>
-
+                            <div class="header-wrapper">
+                                <header class="logo-header">
+                                    <a  accesskey="z" href="index.html">
+                                        <img src="media/Site-logo.webp" height="65" width="250"   alt="Шрек вики">
+                                    </a>
+                                    <a href="index.html" class="name-header">
+                                        Шрек Вики Заглавная
+                                    </a>
+                                    <nav class="menu">
+                                        <div class="menu-item" data-submenu="menu">
+                                                        <span class="trigger">Меню </span>
+                                                        <div class="submenu" id="submenuid">
+                                                            <ul class="menu-list">
+                                                                <li class=item-list>
+                                                                <a href="movies.html">Мультфильмы </a>
+                                                                </li>
+                                                                <li class=item-list>
+                                                                    <a href="games.html">Игры </a>
+                                                                </li>
+                                                                <li class=item-list>
+                                                                    <a href="characters.html">Персонажи </a>
+                                                                </li >
+                                                                <li class=item-list>
+                                                                    <a href="victorins.html">Викторины </a>
+                                                                </li>
+                                                            </ul>
+                                                        </div>     
+                                        </div>
+                                    </nav>
+                                </header>
+                            </div>
                         <!-- Основной контент --> 
                         </div>    
                         <div class="page">
+                            <h1>Заглавная</h1>
                             <div id="content">
-                                    <h1>Заглавная</h1>
-                                    <h1 style="color: #4B7F52;">Добро пожаловать в Болото ШрекаВикипедии!</h1>
-                                    <p>Сайт о фильмах и играх о Шреке. Здесь вы сможете найти фильмы и игры о Шреке и его друзьях.</p>
-                                    <img src="media/images.jpg" alt="шрек">
-                                    <img src="media/fiona.png" alt="фиона">
-                                    <img src="media/donkey.jpg" alt="донк">
-                                    <img src="media/cat.jpg" alt="пусс">
-                                    <img src="media/фаркуад.jpg" alt="пан">
-                                    <img src="media/дракониха.jpg" alt="шрек">
-                                    <p>Материалы сообщества доступны в соответствии с условиями лицензии CC-BY-SA, если не указано иное.</p>
+                                    <table  cellspacing="2" cellpadding="0">
+                                        <tbody>
+                                            <tr>   
+                                                <th class="portal-header">энциклопедия о франшизе «Шрек»</th>
+                                            </tr> 
+                                            <tr>
+                                                <td class="portal-body">
+                                                    <center>
+                                                        <span style="font-size: 125%;">Приготовьтесь погрузиться в мир, где огры носят корону сарказма, ослы поют диско, а принцессы бьют морды. Этот сайт — ваша карта Дальнего-Дальнего Королевства, где вы найдете:</span>
+                                                    </center>
+                                                    <ul style="margin: 0px 0px 24px; list-style-type: none">
+                                                            <li>🧅 Энциклопедию персонажей — от Шрека до самого мелкого тролля.</li>
+                                                            <li>📽️ Тайны фильмов — как создавали сцены, которые заставили плакать даже Злую Королеву.</li>
+                                                            <li>🎮 Игры — где можно устроить драку в стиле «Шрек vs Кот в сапогах».</li>
+                                                            <li>🧠 Викторины — проверьте, сможете ли вы назвать все слои луковой правды!</li>
+                                                    </ul>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <p>
+                                        <br>
+                                    </p>
                             </div>
                         </div>
                     </div>
                     <!-- Подвал -->
                     <div class="footer">
                         <div class="container">
-                            <p>© 2023 Shrekpedia. Все права защищены.</p>
+                            <p>© 2025 Shrekpedia. Все права защищены.</p>
                             <p>Сайт создан в рамках курсовой работы по Основам Интернет Технологиям. Все материалы — фанатский некоммерческий проект.</p>
                         </div>
                     </div>
                     
             </div>
         </div>
-        <script>
-        // Обновите обработчики событий
-        document.querySelectorAll('.menu-item').forEach(item => {
-        const submenu = item.querySelector('.submenu');
-        let timeout;
-
-        item.addEventListener('mouseenter', () => {
-                clearTimeout(timeout);
-                submenu.style.display = 'block';
-                submenu.style.opacity = '1';
-                submenu.style.transform = 'translateY(0)';
-            });
-
-        item.addEventListener('mouseleave', () => {
-                timeout = setTimeout(() => {
-                    submenu.style.display = 'none';
-                    submenu.style.opacity = '0';
-                    submenu.style.transform = 'translateY(-10px)';
-                }, 300);
-            });
-
-        submenu.addEventListener('mouseenter', () => clearTimeout(timeout));
-        submenu.addEventListener('mouseleave', () => {
-                timeout = setTimeout(() => {
-                    submenu.style.display = 'none';
-                    submenu.style.opacity = '0';
-                    submenu.style.transform = 'translateY(-10px)';
-                }, 200);
-            });
-        });
-        </script>
+        <script src="static/index.js"></script>
     </body>
 </html>
