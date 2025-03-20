@@ -1,79 +1,153 @@
+
 <!DOCTYPE html>
 <html lang="ru">
-    <head>
-        <title>Shrekopedia</title>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="keywords" content="Shrek, Фильмы, игры">
-        <meta name="author" content="Обухов Юрий">
-        <meta name="description" content="Shrekopedia">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" type="text/css" href="static/index.css">
-        <link rel="shortcut icon" href="media/Site-favicon.ico">
-    </head>
-    <body>
-        <div class="main-container">
-            <!-- навигация с кнопкой войти или зарегестрироватся -->
-            <!-- <nav class="global-navigator">
-                    <span class="register-trigger">
-                        <a href="register.html">Войтите в свой аккаунт или зарегистрируйтесь.</a>
-                    </span>
-            </nav> -->
+        <head>
+            <title>Shrekopedia</title>
+            <meta charset="utf-8">
+            <meta http-equiv="X-UA-Compatible" content="IE=edge">
+            <meta name="keywords" content="Shrek, Фильмы, игры">
+            <meta name="author" content="Обухов Юрий">
+            <meta name="description" content="Shrekopedia">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <link rel="stylesheet" type="text/css" href="static/index.css">
+            <link rel="shortcut icon" href="media/Site-favicon.ico">
+            
+        </head>
+        <body>
             <div class="main-container">
-                <div class="background-image"></div>
-                    <div class="resizable-container">
-                        <!-- Шапка -->
-                        <div >
-                            <div class="header-wrapper">
-                                <header class="logo-header">
-                                    <a  accesskey="z" href="index.html">
-                                        <img src="media/Site-logo.webp" height="65" width="250"   alt="Шрек вики">
-                                    </a>
-                                    <a href="index.html" class="name-header">
-                                        Шрек Вики Заглавная
-                                    </a>
-                                    <nav class="menu">
-                                        <div class="menu-item" data-submenu="menu">
-                                                        <span class="trigger">Меню </span>
-                                                        <div class="submenu" id="submenuid">
-                                                            <ul class="menu-list">
-                                                                <li class=item-list>
-                                                                <a href="movies.html">Мультфильмы </a>
-                                                                </li>
-                                                                <li class=item-list>
-                                                                    <a href="games.html">Игры </a>
-                                                                </li>
-                                                                <li class=item-list>
-                                                                    <a href="characters.html">Персонажи </a>
-                                                                </li >
-                                                                <li class=item-list>
-                                                                    <a href="victorins.html">Викторины </a>
-                                                                </li>
-                                                            </ul>
-                                                        </div>     
-                                        </div>
-                                    </nav>
-                                </header>
-                            </div>
-                        <!-- Основной контент --> 
-                        </div>    
-                        <div class="page">
-                            <div id="content">
-                                    <h1>Викторины</h1>
-    
+                <!-- навигация с кнопкой войти или зарегестрироватся -->
+                <!-- <nav class="global-navigator">
+                        <span class="register-trigger">
+                            <a href="register.html">Войтите в свой аккаунт или зарегистрируйтесь.</a>
+                        </span>
+                </nav> -->
+                <div class="main-container">
+                    <div class="background-image"></div>
+                        <div class="resizable-container">
+                            <!-- Шапка -->
+                            <div >
+                                <div class="header-wrapper">
+                                    <header class="logo-header">
+                                        <a  accesskey="z" href="index.html">
+                                            <img src="media/Site-logo.webp" height="65" width="250"   alt="Шрек вики">
+                                        </a>
+                                        <a href="index.html" class="name-header">
+                                            Шрек Вики Заглавная
+                                        </a>
+                                        <nav class="menu">
+                                            <div class="menu-item" data-submenu="menu">
+                                                            <span class="trigger">Меню </span>
+                                                            <div class="submenu" id="submenuid">
+                                                                <ul class="menu-list">
+                                                                    <li class=item-list>
+                                                                    <a href="movies.html">Мультфильмы </a>
+                                                                    </li>
+                                                                    <li class=item-list>
+                                                                        <a href="games.html">Игры </a>
+                                                                    </li>
+                                                                    <li class=item-list>
+                                                                        <a href="characters.html">Персонажи </a>
+                                                                    </li >
+                                                                    <li class=item-list>
+                                                                        <a href="victorins.html">Викторины </a>
+                                                                    </li>
+                                                                </ul>
+                                                            </div>     
+                                            </div>
+                                        </nav>
+                                    </header>
+                                </div>
+                            <!-- Основной контент --> 
+                            </div>    
+                            <div class="page">
+                                <h1 class="page-header-title">Викторины</h1>
+                                <div id="content">
+                                    <div class="quiz-container">
+                                        <h1>🧅 Викторина по вселенной Шрека 🐴</h1>
+                                        <div id="question" class="question"></div>
+                                        <div class="options" id="options"></div>
+                                        <div class="score" id="score">Счёт: 0</div>
+                                        <button onclick="restartQuiz()" class="restart">Начать заново</button>
+                                    </div>       
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <!-- Подвал -->
-                    <div class="footer">
-                        <div class="container">
-                            <p>© 2023 Shrekpedia. Все права защищены.</p>
-                            <p>Сайт создан в рамках курсовой работы по Основам Интернет Технологиям. Все материалы — фанатский некоммерческий проект.</p>
+                        <!-- Подвал -->
+                        <div class="footer">
+                            <div class="container">
+                                <p>© 2025 Shrekpedia. Все права защищены.</p>
+                                <p>Сайт создан в рамках курсовой работы по Основам Интернет Технологиям. Все материалы — фанатский некоммерческий проект.</p>
+                            </div>
                         </div>
-                    </div>
-                    
+                        
+                </div>
             </div>
-        </div>
-        <script src="static/index.js"></script>
-    </body>
+            <script src="static/index.js"></script>
+    <script>
+        let currentQuestion = 0;
+        let score = 0;
+        
+        const questions = [
+            {
+                question: "Как зовут ослика-друга Шрека?",
+                options: ["Буррито", "Осёл", "Иа-Иа", "Моисей"],
+                correct: 1
+            },
+            {
+                question: "Кто озвучивает Кота в сапогах?",
+                options: ["Антонио Бандерас", "Брэд Питт", "Джонни Депп", "Дуэйн Джонсон"],
+                correct: 0
+            },
+            {
+                question: "Что Шрек сравнивает с луком?",
+                options: ["Свою хижину", "Свою дружбу", "Свою жизнь", "Свои уши"],
+                correct: 2
+            }
+        ];
+
+        function showQuestion() {
+            const questionElem = document.getElementById('question');
+            const optionsElem = document.getElementById('options');
+            
+            questionElem.innerHTML = questions[currentQuestion].question;
+            optionsElem.innerHTML = '';
+            
+            questions[currentQuestion].options.forEach((option, index) => {
+                const button = document.createElement('button');
+                button.innerHTML = option;
+                button.onclick = () => checkAnswer(index);
+                optionsElem.appendChild(button);
+            });
+        }
+
+        function checkAnswer(selected) {
+            if (selected === questions[currentQuestion].correct) {
+                score++;
+                alert("🎉 Правильно! +1 болотное очко!");
+            } else {
+                alert("❌ Неверно! Правильный ответ: " + 
+                    questions[currentQuestion].options[questions[currentQuestion].correct]);
+            }
+
+            document.getElementById('score').innerHTML = `Счёт: ${score}`;
+            
+            currentQuestion++;
+            if (currentQuestion < questions.length) {
+                showQuestion();
+            } else {
+                alert(`🏆 Викторина завершена! Ваш результат: ${score}/${questions.length}`);
+            }
+        }
+
+        function restartQuiz() {
+            currentQuestion = 0;
+            score = 0;
+            document.getElementById('score').innerHTML = `Счёт: ${score}`;
+            showQuestion();
+        }
+
+        // Запуск викторины при загрузке
+        window.onload = showQuestion;
+    </script>
+</body>
 </html>

@@ -193,6 +193,10 @@ body {
   border-radius: 5px;
   box-shadow: 0 0 20px rgba(0,0,0,0.2);
 }
+.page-header-title {
+  margin-bottom: 24px;
+}
+
 .footer {
   position: relative;
   bottom: 0;
