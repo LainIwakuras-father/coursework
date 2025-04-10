@@ -201,37 +201,74 @@ body {
 
 /* Стили Блока "Содеражания Страницы" */
 .toc {
-  background: rgb(247, 244, 244);
-  border: 1px solid #dbd7d7;
-  border-radius: 3px;
-  padding: 12px;
+  background: rgb(255, 255, 255);
   margin: 24px auto 24px 0;
-  font-size: 100%;
   width: fit-content;
-  display: table;
 }
 
 .toc-header {
+  border: 1px solid #dbd7d7;
+  border-radius: 3px;
+  line-height: 1;
+  padding: 12px;
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
-#toc-list {
-  margin: 0;
-  padding: 0 0 0 12px;
+
+.toc-header button {
+  font-size: 100%;
+  color: var(--theme-page-text-color);
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
 }
+
+.toc-header button:hover {
+  color: #6b8a2e;
+  text-decoration: underline;
+}
+
+.toc-content {
+  overflow: hidden;
+  padding-left: 30px;
+  border: 1px solid #dbd7d7;
+  border-radius: 3px;
+  cursor: default;
+}
+
+
+#toc-list {
+  padding: 9px 12px 9px 0;
+  display: none;
+}
+
 
 #toc-list li a {
-  text-decoration: none;
-  
-  
+    color: var(--theme-page-text-color);
+    display: block;
+    line-height: 1.75;
+    padding: 2px 6px;
+    text-decoration: none;
+    cursor: default;
+    
 }
-#toc-list li:hover {
-  background-color: #4b975594;
-  color: #46e053;
+#toc-list li:hover  {
+  color: #6b8a2e;
+  border-radius: 3px;
+  background-color: #44802c52;
+  transition-duration: .3s;
+  transition-property: background-color, color;
+  
 }
 
 
+#toc-list a:hover {
+  color: #64802c;
+}
+#toc-list li::marker {
+  background-color:#64802c ;
+}
 
 /* Стили Подвала страницы */
 .footer {

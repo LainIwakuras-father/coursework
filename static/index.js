@@ -30,8 +30,11 @@ document.querySelectorAll('.menu-item').forEach(item => {
 
 document.getElementById('toc-toggle').addEventListener('click', function() {
         const tocList = document.getElementById('toc-list');
-        const isExpanded = this.getAttribute('aria-expanded') === 'true';
+        const NotisExpanded = this.getAttribute('aria-expanded') === 'true';
         
-        tocList.style.display = isExpanded ? 'none' : 'block';
-        this.setAttribute('aria-expanded', !isExpanded);
+        tocList.style.display = NotisExpanded ? 'block' : 'none';
+        this.setAttribute('aria-expanded', !NotisExpanded);
+        this.textContent = NotisExpanded ?   '[Скрыть]' : '[Показать]';
         });
+
+    
