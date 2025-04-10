@@ -71,6 +71,7 @@ body {
   margin: 0 auto;
   position: relative;
 }
+/* СТили Заголовков Страницы */
 .header-wrapper {
   display: flex;
   flex-direction: column;
@@ -97,6 +98,8 @@ body {
   text-decoration: underline;
 }
 
+
+/* Стили Всплывающего Меню */
 .menu {
   padding: 0px 25px 0px  0px;
   position: relative;
@@ -149,8 +152,6 @@ body {
   overflow-y: auto;
 }
 
-
-
 .item-list a {
   color: black;
   text-decoration: none;
@@ -182,6 +183,7 @@ body {
   display: block;
 }
 
+/* СТили БЛока с Контентом */
 .page {
   z-index: 1; /* Поверх фона */
   background-color: rgb(255, 255, 255);
@@ -197,6 +199,41 @@ body {
   margin-bottom: 24px;
 }
 
+/* Стили Блока "Содеражания Страницы" */
+.toc {
+  background: rgb(247, 244, 244);
+  border: 1px solid #dbd7d7;
+  border-radius: 3px;
+  padding: 12px;
+  margin: 24px auto 24px 0;
+  font-size: 100%;
+  width: fit-content;
+  display: table;
+}
+
+.toc-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+#toc-list {
+  margin: 0;
+  padding: 0 0 0 12px;
+}
+
+#toc-list li a {
+  text-decoration: none;
+  
+  
+}
+#toc-list li:hover {
+  background-color: #4b975594;
+  color: #46e053;
+}
+
+
+
+/* Стили Подвала страницы */
 .footer {
   position: relative;
   bottom: 0;
