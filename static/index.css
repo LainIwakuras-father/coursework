@@ -199,6 +199,20 @@ body {
   margin-bottom: 24px;
 }
 
+dd > p {
+  margin: 0 0 24px ;
+}
+.portal > p {
+  margin: 0 0 24px ;
+}
+
+/* Стили Блока "Содеражания Страницы" */
+.toc {
+  background: rgb(255, 255, 255);
+  margin: 24px auto 24px 0;
+  
+}
+
 /* Стили Блока "Содеражания Страницы" */
 .toc {
   background: rgb(255, 255, 255);
@@ -234,7 +248,6 @@ body {
   padding-left: 30px;
   border: 1px solid #dbd7d7;
   border-radius: 3px;
-  cursor: default;
 }
 
 
@@ -249,9 +262,7 @@ body {
     display: block;
     line-height: 1.75;
     padding: 2px 6px;
-    text-decoration: none;
-    cursor: default;
-    
+    text-decoration: none; 
 }
 #toc-list li:hover  {
   color: #6b8a2e;
