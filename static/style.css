@@ -9,35 +9,10 @@
 body {
     font-family: 'Comic Sans MS', cursive;
     background-color: #e6f5e6;
-    line-height: 1.6;
     font-size: 14px;
     line-height: 1.5;
 }
-/* .global-navigator {
-  position: relative;
-  margin: 10px;
-  padding: 0;
-  
-}
-.register-trigger {
-  color: #ffffff;
-  font-weight: bold;
-  padding: 8px 15px;
-  border: 1px solid #ffffff;
-  background: #ffffff;
-  border-radius: 4px;
-  transition: background-color 0.3s ease;
-  cursor: pointer;
-  font-size: 16px;
-  
-}
-.register-trigger:hover {
-  background-color: #9c9c9c;
-}
 
-.global-navigator:hover {
-  background-color: rgba(255, 255, 255, 0);
-} */
 .main-container {
   position: relative;
   min-height: 100vh;
@@ -196,22 +171,156 @@ body {
   box-shadow: 0 0 20px rgba(0,0,0,0.2);
 }
 .page-header-title {
-  margin-bottom: 24px;
+  color: #000000;
+  border-bottom: 2px solid #000000;
+  padding-bottom: 5px;
+}
+
+dd {
+  align-items: flex-start;
+  flex: 1;
+  
 }
 
 dd > p {
+  font-size: inherit;
   margin: 0 0 24px ;
+  text-align: justify;
+  font-weight: 400;
+  text-indent: 1.47cm;
 }
-.portal > p {
+dt {
+  font-weight: bold;
+  font-size: 24px;
+  color: #000000;
+  line-height: 1.25;
+  margin: 18px 0 9px;
+  padding: 6px 0;
+  border-bottom: 1px solid #6b6969a2;
+  padding-bottom: 5px;
+  overflow-wrap: break-word;
+}
+section > p {
+  font-size: inherit;
   margin: 0 0 24px ;
+  text-align: justify;
+  font-weight: 400;
+  text-indent: 1.47cm;;
 }
 
-/* Стили Блока "Содеражания Страницы" */
-.toc {
-  background: rgb(255, 255, 255);
-  margin: 24px auto 24px 0;
-  
+.subheader {
+  font-weight: bold;
+  font-size: 24px;
+  color: #000000;
+  line-height: 1.25;
+  margin: 18px 0 9px;
+  padding: 6px 0;
+  border-bottom: 1px solid #6b6969a2;
+  padding-bottom: 5px;
+  overflow-wrap: break-word;
 }
+
+.inline-image-right {
+  float: right;
+  width: 180px;
+  height: auto;
+  margin: 0 0 15px 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+
+/* Стили раздела Викторин */
+.quiz-container {
+  background: #ffffff;
+  max-width: 800px;
+  padding: 30px;
+  margin: 30px auto;
+  border-radius: 8px;
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.26);
+  position: relative;
+  color: #333;
+}
+.quiz-container h1 {
+  font-size: 32px;
+  font-size: 32px;
+  color: #333; /* Зелёный цвет из вселенной Шрека */
+  text-align: center;
+  margin: 0 0 30px;
+  padding-bottom: 15px;
+  border-bottom: 3px solid #000000a2;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+}
+
+.question {
+  text-align: center;
+  font-size: 22px;
+  font-weight: 600;
+  margin: 20px 0;
+  line-height: 1.5;
+  color: #333;
+  padding: 15px;
+  background: #f5f5f5;
+  border-radius: 5px;
+}
+
+.options {
+  display: grid;
+  gap: 12px;
+  margin: 25px 0;
+}
+
+.options button {
+  padding: 15px 20px;
+  font-size: 18px;
+  background: #f8f8f8;
+  border: 2px solid #6b8a2e;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-align: center;
+  color: #2d6421;
+}
+
+.options button:hover {
+  background: #6b8a2e;
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+}
+
+.score {
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+  margin: 25px 0;
+  padding: 12px;
+  background: #e8f5e998;
+  border-radius: 5px;
+  color: ##6b8a2e;
+}
+
+.restart {
+  display: block;
+  width: 100%;
+  max-width: 200px;
+  margin: 20px auto 0;
+  padding: 12px 25px;
+  font-size: 18px;
+  background: #6b8a2e;
+  color: white;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.restart:hover {
+  background: #6b8a2e;
+  transform: scale(1.05);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
 
 /* Стили Блока "Содеражания Страницы" */
 .toc {
